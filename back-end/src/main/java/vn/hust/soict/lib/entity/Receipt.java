@@ -13,12 +13,15 @@ public class Receipt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "user_id")
-    private int userId;
-    @Column(name = "book_id")
-    private int bookId;
-    @Column(name = "staff_id")
-    private int staffId;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
+    @ManyToOne
+    @JoinColumn(name = "staff_id")
+    private Staff staff;
     @Column(name = "borrowed_at")
     private Date borrowedAt;
     @Column(name = "back_at")

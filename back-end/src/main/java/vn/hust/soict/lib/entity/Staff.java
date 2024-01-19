@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
+
 @Data
 @Builder
 @Entity
@@ -16,6 +18,8 @@ public class Staff {
     private String name;
     private String email;
     private String role;
+    @OneToMany(mappedBy = "staff")
+    private List<Receipt> receipts;
     private String password;
     private Date birthday;
     private boolean gender;

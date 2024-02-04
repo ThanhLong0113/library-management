@@ -3,6 +3,8 @@ package vn.hust.soict.lib;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import vn.hust.soict.lib.controller.AuthorController;
+import vn.hust.soict.lib.service.impl.AuthorService;
 
 @SpringBootApplication
 public class LibraryApplication implements CommandLineRunner {
